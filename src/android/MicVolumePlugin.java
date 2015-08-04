@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import android.app.Activity;
 import android.content.Intent;
+import android.widget.Toast;
 
 // used by audio
 import android.os.Bundle;
@@ -81,6 +82,8 @@ public class MicVolumePlugin extends CordovaPlugin
 
         returnObj.put("volume", Math.sqrt(amplitude));
        callbackContext.success(returnObj);
+       Toast toast = Toast.makeText(cordova.getActivity().getApplicationContext(), "test", Toast.LENGTH_SHORT);
+toast.show();
 
     }
 
