@@ -14,6 +14,8 @@ import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
 
+import android.widget.Toast;
+
 public class MicVolumePlugin extends CordovaPlugin 
 {
   @Override
@@ -80,12 +82,10 @@ public class MicVolumePlugin extends CordovaPlugin
 
         returnObj.put("volume", Math.sqrt(amplitude));
        callbackContext.success(returnObj);
-/*       Context context = getApplicationContext();
-CharSequence text = "Hello toast!";
-int duration = Toast.LENGTH_SHORT;
 
-Toast toast = Toast.makeText(context, text, duration);
-toast.show();*/
+
+Toast toast = Toast.makeText(getApplicationContext(), "hello", Toast.LENGTH_SHORT);
+toast.show();
     }
 
     private void stop(CallbackContext callbackContext) {
