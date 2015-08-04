@@ -80,12 +80,12 @@ public class MicVolumePlugin extends CordovaPlugin
 
         returnObj.put("volume", Math.sqrt(amplitude));
        callbackContext.success(returnObj);
-       Context context = getApplicationContext();
+/*       Context context = getApplicationContext();
 CharSequence text = "Hello toast!";
 int duration = Toast.LENGTH_SHORT;
 
 Toast toast = Toast.makeText(context, text, duration);
-toast.show();
+toast.show();*/
     }
 
     private void stop(CallbackContext callbackContext) {
